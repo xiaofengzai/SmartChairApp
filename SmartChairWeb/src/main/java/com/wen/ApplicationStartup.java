@@ -12,6 +12,6 @@ import org.springframework.stereotype.Component;
 public class ApplicationStartup implements ApplicationListener<ContextRefreshedEvent> {
     public void onApplicationEvent(ContextRefreshedEvent event)
     {
-        new Thread(new SmartyClient()).start();
+       // new Thread(new SmartyClient()).start();
     }
 }

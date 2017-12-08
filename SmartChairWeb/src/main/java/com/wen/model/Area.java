@@ -1,7 +1,6 @@
 package com.wen.model;
 
-import org.springframework.data.annotation.Id;
-
+import javax.persistence.Id;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,10 +10,7 @@ import javax.persistence.GenerationType;
  * Created by wenfeng on 2017/12/6.
  */
 @Entity
-public class Area  {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id ;
+public class Area  extends BaseModel{
     @Column(nullable = false)
     private String code;
     @Column(nullable = false)
@@ -23,14 +19,6 @@ public class Area  {
     private String name;
     @Column(nullable = false)
     private Integer level;
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     public String getCode() {
         return code;

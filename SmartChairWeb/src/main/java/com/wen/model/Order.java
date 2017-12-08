@@ -2,6 +2,7 @@ package com.wen.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.sql.Date;
 
 /**
@@ -9,7 +10,8 @@ import java.sql.Date;
  * Created by wenfeng on 2017/12/6.
  */
 @Entity
-public class Order extends BaseModel {
+@Table(name = "t_order")
+public class Order  extends BaseModel{
     /**
      * 订单编号
      */

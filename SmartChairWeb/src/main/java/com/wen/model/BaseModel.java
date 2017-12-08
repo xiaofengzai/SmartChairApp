@@ -1,23 +1,21 @@
 package com.wen.model;
 
-import org.hibernate.annotations.GenericGenerator;
-import org.springframework.data.annotation.Id;
+import com.wen.util.UUIDUtil;
 
 import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.MappedSuperclass;
-import java.sql.Date;
+import javax.persistence.Id;
+import java.util.Date;
 
 /**
  * Created by wenfeng on 2017/12/6.
  */
 @MappedSuperclass
 public class BaseModel {
+
     @Id
-    @GeneratedValue(generator = "system-uuid")
-    @GenericGenerator(name = "system-uuid", strategy = "uuid")
-    private Long id;
+    @Column(nullable = false,length = 50)
+    private String id= UUIDUtil.getCurrentUUID();
 
     @Column(nullable = false)
     private Date createdTime;
@@ -25,11 +23,11 @@ public class BaseModel {
     @Column(nullable = false)
     private Date updatedTime;
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
