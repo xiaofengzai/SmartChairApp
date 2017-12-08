@@ -75,7 +75,7 @@
 	export default {
 		data() {
 			return {
-				sysName:'VUEADMIN',
+				sysName:'智能按摩椅管理平台',
 				collapsed:false,
 				sysUserName: '',
 				sysUserAvatar: '',

@@ -27,19 +27,21 @@ let routes = [
     {
         path: '/',
         component: Home,
-        name: '导航一',
+        name: '设备管理',
         iconCls: 'el-icon-message',//图标样式class
         children: [
             { path: '/main', component: Main, name: '主页', hidden: true },
             { path: '/table', component: Table, name: 'Table' },
             { path: '/form', component: Form, name: 'Form' },
             { path: '/user', component: user, name: '列表' },
+            { path: '/device', component: user, name: '设备列表' },
+            { path: '/device/status', component: user, name: '设备状态列表' }
         ]
     },
     {
         path: '/',
         component: Home,
-        name: '导航二',
+        name: '运营管理',
         iconCls: 'fa fa-id-card-o',
         children: [
             { path: '/page4', component: Page4, name: '页面4' },
@@ -53,16 +55,16 @@ let routes = [
         iconCls: 'fa fa-address-card',
         leaf: true,//只有一个节点
         children: [
-            { path: '/page6', component: Page6, name: '导航三' }
+            { path: '/page6', component: Page6, name: '营收管理' }
         ]
     },
     {
         path: '/',
         component: Home,
-        name: 'Charts',
+        name: '统计分析',
         iconCls: 'fa fa-bar-chart',
         children: [
-            { path: '/echarts', component: echarts, name: 'echarts' }
+            { path: '/echarts', component: echarts, name: '统计分析' }
         ]
     },
     {
